@@ -1,0 +1,25 @@
+<h1>Model Information Page</h1>
+
+
+<input id="RefNum" type="text" placeholder="Enter Reference Number" [(ngModel)]="referenceNumber" />
+<br/><br/>
+<input id="zipCode" type="text" placeholder="Enter ZipCode" [(ngModel)]="zipCode" />
+<br/><br/>
+<input id="programCode" type="text" placeholder="Enter Program Code" [(ngModel)]="programCode" />
+<br/><br/>
+<input id="associateNumber" type="text" placeholder="Enter Associate Number" [(ngModel)]="associateNumber" />
+<br/><br/>
+<input id="clientID" type="text" placeholder="Enter DSP Client ID" [(ngModel)]="clientID" />
+<br/><br/>
+<br/><br/>
+<button (click)="GetResponse()" formtarget="_blank">Submit</button>
+
+<br/><br/>
+
+<label *ngIf="isResponse"><i>Please wait while we get response......</i></label>
+
+<br/><br/>
+
+<textarea class = "modelResponse" type="text" id="modelResponse"  [(ngModel)]="modelResponse" ></textarea>
+
+<router-outlet></router-outlet>
